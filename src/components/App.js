@@ -1,16 +1,15 @@
-
 import React from "react";
 import './../styles/App.css';
-import WeatchDisplay from "./WeatherDisplay";
+import WeatchDisplay from "./WeatherDisplay"
 const App = () => {
   const [data,setData] = React.useState(null)
 
   React.useEffect(()=>{
-    sttData({ temperature: 25, conditions: "Sunny" })
-  },[])
+  setData({ temperature: 25, conditions: "Sunny" })
+},[])
   return (
     <div>
-        {data && <WeatchDisplay data={data}/>}
+    {data&&  <WeatchDisplay data={data}/>}
     </div>
   )
 }
